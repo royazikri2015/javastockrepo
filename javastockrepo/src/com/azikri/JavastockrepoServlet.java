@@ -19,5 +19,6 @@ public class JavastockrepoServlet extends HttpServlet {
 		resp.setContentType("text/html");
 		
 		resp.getWriter().println("Result of (num1+num2) * num3 is: result");
+		resp.getWriter().println( resultStr );
 	}
 }
