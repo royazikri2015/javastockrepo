@@ -4,15 +4,27 @@ xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-	<servlet>
-		<servlet-name>Javastockrepo</servlet-name>
+   <servlet>
+		<servlet-name>JavaStockrepo</servlet-name>
 		<servlet-class>com.azikri.JavastockrepoServlet</servlet-class>
 	</servlet>
+	
 	<servlet-mapping>
-		<servlet-name>Javastockrepo</servlet-name>
-		<url-pattern>javastockrepo</url-pattern>
+		<servlet-name>JavaStockrepo</servlet-name>
+		<url-pattern>/javaStockrepo</url-pattern>
 	</servlet-mapping>
-	<welcome-file-list>
+	
+    <servlet>
+    <servlet-name>MyNewServlet</servlet-name>
+    <servlet-class>com.azikri.MyNewServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+    <servlet-name>MyNewServlet</servlet-name>
+    <url-pattern>/MyNewServlet</url-pattern>
+    </servlet-mapping>
+
+<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 </web-app>
