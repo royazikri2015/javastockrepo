@@ -8,7 +8,7 @@ public class JavastockrepoServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		resp.setContentType("text/html");
-	int num1=4;
+	int num1=5;
 	int num2=3;
 	int num3=7;
 	int result = (num1+num2)*num3;
