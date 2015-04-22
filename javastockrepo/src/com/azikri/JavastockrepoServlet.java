@@ -13,7 +13,7 @@ public class JavastockrepoServlet extends HttpServlet {
 	int num3=7;
 	int result = (num1+num2)*num3;
 	
-	String resultStr = new String( "<h1>Result of (num1+num2)*num3 is "+result+" "+"</h1>)");
+	String resultStr = new String( "<h1>Result of (num1+num2)*num3 is " +result+ " "+"</h1>");
 	resp.getWriter().println( resultStr );
 		
 	
