@@ -26,7 +26,7 @@ public class MyNewServlet extends HttpServlet {
 
 		 int base=20;
 		 int exp=13;
-		 double res = Math.pow(base, exp);
+		 long res = (long) Math.pow(base, exp);
 		 
 		 
 		 String circle_areaStr= new String ( "<h1>Area of circle with radius " + radius + " is " + circle_area + "</h1><br>");
