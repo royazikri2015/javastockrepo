@@ -35,8 +35,8 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
     </servlet-mapping>
     
       <servlet>
-    <servlet-name>MyPortfolioManager</servlet-name>
-    <servlet-class>com.azikri.MyPortfolioManager</servlet-class>
+    <servlet-name>portFolio</servlet-name>
+    <servlet-class>com.azikri.portFolio</servlet-class>
     </servlet>
     
      <servlet-mapping>
