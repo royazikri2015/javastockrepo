@@ -10,7 +10,7 @@ public class StockDetailsServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 			
-		resp.setContentType("text/html");
+			resp.setContentType("text/html");
 			
 			Calendar cal= Calendar.getInstance();
 			cal.set (2014,10,15);
