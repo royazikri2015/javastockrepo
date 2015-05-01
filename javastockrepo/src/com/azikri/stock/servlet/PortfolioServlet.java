@@ -11,15 +11,15 @@ import com.azikri.app.model.service.PortfolioManager;
 
 public class PortfolioServlet extends HttpServlet{
 	
-	protected void doGet(HttpServletRequest request,HttpServletResponse response)
+	protected void doGet(HttpServletRequest request,HttpServletResponse resp)
 			throws ServletException, IOException{
 			
-			response.setContentType("text/html");
+			resp.setContentType("text/html");
 			
 			PortfolioManager PortfolioManager = new PortfolioManager();
 			Portfolio Portfolio = PortfolioManager.getPortfolio();
 			
-			response.getWriter().println(Portfolio.getHtmlString());
+			resp.getWriter().println(Portfolio.getHtmlString());
 			}
 
 	

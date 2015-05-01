@@ -9,9 +9,8 @@ public class Portfolio {
 	private Stock[] stocks;
 	
 	public Portfolio() {
-		this.name="Google";
-		this.stockIndex=0;
-		this.stocks= new Stock [MAX_PORTFOLIO_SIZE];
+	
+		stocks= new Stock [MAX_PORTFOLIO_SIZE];
 	}
 		
 	public void addStock (Stock stock){
@@ -30,7 +29,7 @@ public String getHtmlString() {
 		
 		for(int i = 0; i < stockIndex ;i++) {
 			Stock current = this.stocks[i];
-			ret += current.getHtmlDesc() + "<br>";
+			ret += current.getHtmlDescription() + "<br>";
 		}
 		
 		return ret;

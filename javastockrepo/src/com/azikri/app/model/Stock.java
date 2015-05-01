@@ -26,43 +26,33 @@ public class Stock {
 		this.date=date;
 	}
 
-	
-
 	public float getAsk() {
 		return ask;
 	}
 
-
-
 	public void setAsk(float ask) {
-		this.ask = ask;
-	}
-
-
-
+			this.ask = ask;
+		}
+	
 	public float getBid() {
-		return bid;
-	}
-
-
-
+			return bid;
+		}
+	
 	public void setBid(float bid) {
-		this.bid = bid;
-	}
-
-
-
+			this.bid = bid;
+		}
+	
 	public int getRecommendation() {
-		return recommendation;
-	}
-
+			return recommendation;
+		}
+	
 	public void setRecommendation(int recommendation) {
-		this.recommendation = recommendation;
-	}
-
+			this.recommendation = recommendation;
+		}
+	
 	public int getStockQuantity() {
-		return stockQuantity;
-	}
+			return stockQuantity;
+		}
 
 	public void setStockQuantity(int stockQuantity) {
 		this.stockQuantity = stockQuantity;
@@ -81,13 +71,14 @@ public class Stock {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public String getHtmlDesc() {
+	public String getHtmlDescription() {
 		
 		DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
 		String dateStr = df.format(getDate());
-		String ret=	" <b>Recommendation: </br>" + getRecommendation() +
-				" <br>stockQuantity: </b> " + getStockQuantity()
-				+ ", <b> Date: </b>" +dateStr;
+		String ret=	" <b>symbol: </br>" + getSymbol() +
+				" <br>ask: </b> " + getAsk()
+				+" <br>bid: </b> " + getBid()
+				+", <b> Date: </b>" +dateStr;
 		
 		return ret;
 	}

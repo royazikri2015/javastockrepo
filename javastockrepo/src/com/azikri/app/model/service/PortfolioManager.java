@@ -6,10 +6,6 @@
 	import com.azikri.Stock;
 	import com.azikri.app.model.Portfolio;
 	
-		
-	/*public void addPortfolio (PortfolioManager portfolio){
-		
-	}*/	
 	public class PortfolioManager{
 		
 	
@@ -26,18 +22,16 @@
 			cal.set(2014,10,15);
 			Date date3 = (Date) cal.getTime();
 			
+			portfolio.setName ("Roy's portfolio");
 			
 			Stock stock1= new Stock("PIH", (float) 13.1,(float) 12.4, date1);
 			Stock stock2 = new Stock ("AAL",(float) 5.78, (float)5.5, date2); 
 			Stock stock3 = new Stock ("CAAS",(float)32.2, (float)31.5, date3);
 			
-			portfolio.setName ("Roy's portfolio");
-			
 			return portfolio;
-			/*portfolio.addStock (stock1);
-			 */		
+				
 	}
-	}
+}
 
 	
 	
