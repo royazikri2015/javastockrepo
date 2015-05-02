@@ -1,5 +1,7 @@
 package com.azikri.app.model;
 
+import com.azikri.Stock;
+
 public class Portfolio {
 	
 	private static final int MAX_PORTFOLIO_SIZE=5;
@@ -15,10 +17,10 @@ public class Portfolio {
 		
 	public void addStock (Stock stock){
 		
-		if(stock != null && stockIndex < MAX_PORTFOLIO_SIZE) {
+		if(stocks != null && stockIndex < MAX_PORTFOLIO_SIZE) {
 			this.stocks[stockIndex] = stock;
 			stockIndex++;
-		}else {
+		} else {
 			System.out.println("Sorry, portfolio is full, or stock is null!");	
 		}
 	}
@@ -44,13 +46,7 @@ public String getHtmlString() {
 		this.name = name;
 	}
 
-	public int getStockIndex() {
-		return stockIndex;
-	}
-
-	public void setStockIndex(int stockIndex) {
-		this.stockIndex = stockIndex;
-	}
+	
 
 	public Stock[] getStocks() {
 		return stocks;

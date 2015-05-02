@@ -16,14 +16,15 @@ public class Stock {
 	private float ask,bid;
 	private String symbol;
 	private Date date;
-	public Stock(String symbol, int recommandation, int stockQuantity,float bid,float ask,Date date){
+	public Stock(String symbol,float bid,float ask,Date date){
 		
 		this.symbol= symbol;
 		this.ask=ask;
 		this.bid=bid;
-		this.recommendation= recommendation;
-		this.stockQuantity= stockQuantity;
 		this.date=date;
+		/*this.recommendation= recommendation;
+		this.stockQuantity= stockQuantity;*/
+	
 	}
 
 	public float getAsk() {
