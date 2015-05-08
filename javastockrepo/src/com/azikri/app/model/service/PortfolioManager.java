@@ -3,7 +3,7 @@
 	import java.util.Calendar;
 	import java.util.Date;
 	
-	import com.azikri.Stock;
+	import com.azikri.app.model.Stock;
 	import com.azikri.app.model.Portfolio;
 	
 	public class PortfolioManager{

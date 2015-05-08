@@ -15,18 +15,26 @@ public class Stock {
 	private int stockQuantity;
 	private float ask,bid;
 	private String symbol;
-	private Date date;
-	public Stock(String symbol,float bid,float ask,Date date){
+	private Date creation;
+	
+	public Stock(String symbol,float bid,float ask, Date date) {//stock creation
 		
 		this.symbol= symbol;
 		this.ask=ask;
 		this.bid=bid;
-		this.date=date;
+		this.creation=date; 
+		
 		/*this.recommendation= recommendation;
 		this.stockQuantity= stockQuantity;*/
-	
 	}
-
+/* COPY C'TOR of atock */
+	
+	public Stock (Stock stock){
+		this (new String (stock.getSymbol()), stock.getAsk(),stock.getBid(),stock.creation);
+	}
+	
+	
+	
 	public float getAsk() {
 		return ask;
 	}
@@ -66,20 +74,26 @@ public class Stock {
 	public void setName(String value) {
 		this.symbol = value;
 	}
-	public Date getDate() {
+	/*public Date getDate() {
 		return date;
 	}
 	public void setDate(Date date) {
 		this.date = date;
+	}                    */
+	public Date getCreation() {
+		return creation;
+	}
+	public void setCreation(Date creation) {
+		this.creation = creation;
 	}
 	public String getHtmlDescription() {
 		
 		DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-		String dateStr = df.format(getDate());
+		//String dateStr = df.format(getDate());
 		String ret=	" <b>symbol: </br>" + getSymbol() +
 				" <br>ask: </b> " + getAsk()
-				+" <br>bid: </b> " + getBid()
-				+", <b> Date: </b>" +dateStr;
+				+" <br>bid: </b> " + getBid();
+				//+", <b> Date: </b>" +dateStr;
 		
 		return ret;
 	}
