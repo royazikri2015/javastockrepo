@@ -5,35 +5,8 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   
-   <servlet>
-		<servlet-name>JavaStockrepo</servlet-name>
-		<servlet-class>com.azikri.JavastockrepoServlet</servlet-class>
-	</servlet>
+   
 	
-	<servlet-mapping>
-		<servlet-name>JavaStockrepo</servlet-name>
-		<url-pattern>/javaStockrepo</url-pattern>
-	</servlet-mapping>
-	
-    <servlet>
-    <servlet-name>MyNewServlet</servlet-name>
-    <servlet-class>com.azikri.MyNewServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-    <servlet-name>MyNewServlet</servlet-name>
-    <url-pattern>/MyNewServlet</url-pattern>
-    </servlet-mapping>
-    
-        <servlet>
-    <servlet-name>StockDetailsServlet</servlet-name>
-    <servlet-class>com.azikri.StockDetailsServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-    <servlet-name>StockDetailsServlet</servlet-name>
-    <url-pattern>/StockDetailsServlet</url-pattern>
-    </servlet-mapping>
     
       <servlet>
     <servlet-name>PortfolioServlet</servlet-name>

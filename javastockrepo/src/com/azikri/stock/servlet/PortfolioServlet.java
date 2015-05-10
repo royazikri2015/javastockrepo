@@ -28,8 +28,6 @@ public class PortfolioServlet extends HttpServlet{
 			Portfolio portfolio2 = new Portfolio(portfolio);
 			portfolio2.setName ("Portfolio #2"); /* 1.c*/
 			
-			
-			
 			resp.getWriter().println(portfolio.getHtmlString());
 			resp.getWriter().println(portfolio2.getHtmlString());
 			
