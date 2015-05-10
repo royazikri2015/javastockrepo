@@ -14,18 +14,17 @@ public class Portfolio {
 	private static final int MAX_PORTFOLIO_SIZE=5;
 
 	private String name;
-	private int stockIndex;
 	private Stock[] stocks;
-	private int portfolioSize=0;
+	private int portfolioSize;
 	
 	public Portfolio() {
 		stocks = new Stock [MAX_PORTFOLIO_SIZE];
+		portfolioSize = 0;
 	}
 	
 	public Portfolio(String name, int stockIndex) {// Constructor creation
 		this();
 		this.name=name;
-		this.stockIndex=stockIndex;
 	}
 	
 	public Portfolio(String name, int stockIndex,Stock[]stocks) {
@@ -37,52 +36,48 @@ public class Portfolio {
 		this(new String(portfolio.getName()),portfolio.portfolioSize);
 		
 	   
-		for(int i=0; i< portfolio.getPortfolioSize(); i++)
+		for(int i=0; i < portfolio.getPortfolioSize(); i++)
 		{
 			this.addStock(new Stock(portfolio.getStockByIndex(i)));
-			
+			}
 		}
-	
-	
-	}
 		
 	public void addStock (Stock stock){ // add stock to the Portfolio
 		
-		if(stocks != null && stockIndex < MAX_PORTFOLIO_SIZE) {
-			this.stocks[stockIndex] = stock;
-			stockIndex++;
+		if (stocks != null && portfolioSize < MAX_PORTFOLIO_SIZE) {
+			this.stocks[portfolioSize] = stock;
+			portfolioSize++;
 		} else {
 			System.out.println("Sorry, portfolio is full, or stock is null!");	
 		}
 	}
 	
 	public void removeStock(String deleteSymbol){ // remove stock from the portfolio
-		if (stocks[portfolioSize-1].getSymbol().equals(deleteSymbol))
-		{
-			stocks[portfolioSize-1] = null;
-			portfolioSize--;
-		}
-		else
-		{
+			boolean found = false;
 			for (int i=0; i < portfolioSize; i++)
 			{
+				if (found) {
+					this.stocks[i-1] = this.stocks[i];
+ 				}
+				
 				if (this.stocks[i].getSymbol().equals(deleteSymbol))
 				{
-					this.stocks[i] = this.stocks[portfolioSize-1];
-					this.stocks[portfolioSize-1] = null;
-					portfolioSize--;
+					found = true;
+					this.stocks[i] = null;
 				}
 			}
-		}
-		
+			if (found) {
+				this.stocks[portfolioSize] = null;
+				portfolioSize--;
+			}
 	}
 	
 	
-public String getHtmlString() {
+	public String getHtmlString() {
 		
 		String ret = new String( "<h1>" + getName() + "</h1>" );
 		
-		for(int i = 0; i < stockIndex ;i++) {
+		for(int i = 0; i < portfolioSize ;i++) {
 			Stock current = this.stocks[i];
 			ret += current.getHtmlDescription() + "<br>";
 		}

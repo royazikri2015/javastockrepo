@@ -28,12 +28,15 @@ public class PortfolioServlet extends HttpServlet{
 			Portfolio portfolio2 = new Portfolio(portfolio);
 			portfolio2.setName ("Portfolio #2"); /* 1.c*/
 			
-			resp.getWriter().println(portfolio.getHtmlString());
-			resp.getWriter().println(portfolio2.getHtmlString());
+			response += portfolio2.getHtmlString();
 			
 			portfolio.removeStock(portfolio.getStocks()[0].getSymbol());
 			
 			portfolio2.getStocks()[portfolio2.getPortfolioSize()-1].setBid((float)55.55);
+			
+			response +=  "<h1>After remove stock and change bid</h1>";
+			response += portfolio.getHtmlString();
+			response += portfolio2.getHtmlString();
 			
 			resp.getWriter().println(response);
 			}
