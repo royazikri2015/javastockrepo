@@ -6,10 +6,10 @@ import java.util.Date;
 
 public class Stock {
 	
-	private static final int BUY=0;
+	/*private static final int BUY=0;
 	private static final int SELL=1;
 	private static final int REMOVE=2;
-	private static final int HOLD=3;
+	private static final int HOLD=3;*/
 	
 	private int recommendation;
 	private int stockQuantity;
@@ -32,8 +32,6 @@ public class Stock {
 	public Stock (Stock stock){
 		this (new String (stock.getSymbol()), stock.getAsk(),stock.getBid(),stock.creation);
 	}
-	
-	
 	
 	public float getAsk() {
 		return ask;

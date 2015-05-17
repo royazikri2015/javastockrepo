@@ -32,6 +32,8 @@
 			portfolio.addStock(stock2);
 			portfolio.addStock(stock3);
 			
+			portfolio.sellStock("AAL", -1);
+			portfolio.removeStock("CAAS");
 			
 			return portfolio;
 				
