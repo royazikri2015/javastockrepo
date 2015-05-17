@@ -26,7 +26,7 @@
 			Stock stock3 = new Stock ("CAAS",(float)32.2, (float)31.5, date3);
 			
 			
-			portfolio.setName ("Roy's portfolio");
+			portfolio.setName ("“Exercise 7 portfolio");
 			
 			portfolio.addStock(stock1);
 			portfolio.addStock(stock2);
