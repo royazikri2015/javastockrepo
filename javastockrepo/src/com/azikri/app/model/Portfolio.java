@@ -74,7 +74,7 @@ public class Portfolio {
 		}
 		if (exist == false) 
 		{
-			this.stocks[portfolioSize] = new Stock(stock.getSymbol(), stock.getAsk(), stock.getBid(), stock.getDate(), stock.getStockQuantity());
+			this.stocks[portfolioSize] = new Stock(stock.getSymbol(),stock.getAsk(), stock.getBid(),stock.getCreation());
 			portfolioSize++;
 			returnValue = "Added a stock";
 			System.out.println(returnValue);	
@@ -84,7 +84,7 @@ public class Portfolio {
 	public boolean sellStock(String symbol, int quantity){ // sell stocks
 
 		if(symbol == null || quantity < -1){
-			System.out.println("sorry, the stock symbol or stock quantity are wrong");
+			System.out.println("Sorry, the stock symbol or stock quantity are wrong");
 			return false;
 		}
 

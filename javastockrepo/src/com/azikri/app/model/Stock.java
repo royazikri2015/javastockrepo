@@ -27,10 +27,10 @@ public class Stock {
 		/*this.recommendation= recommendation;
 		this.stockQuantity= stockQuantity;*/
 	}
-/* COPY C'TOR of atock */
+/* COPY C'TOR of stock */
 	
 	public Stock (Stock stock){
-		this (new String (stock.getSymbol()), stock.getAsk(),stock.getBid(),stock.creation);
+		this (new String (stock.getSymbol()), stock.getAsk(),stock.getBid(),stock.getCreation());
 	}
 	
 	public float getAsk() {
