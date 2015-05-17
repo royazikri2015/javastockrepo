@@ -229,6 +229,9 @@ public class Portfolio {
 			ret += current.getHtmlDescription() + "<br>";
 		}
 		
+		ret += "<br>" + "Total Portfolio Value: " + getTotalValue() + "$<br>"
+				+ "Total Stocks Value: " + this.getStocksValue() + "$<br>"
+				+ "Balance: " + getBalance() + "$";
 		return ret;
 	}
 	
@@ -261,4 +264,19 @@ public class Portfolio {
 	public void setBalance(float balance) {
 		this.balance = balance;
 	}
+	
+	public double getStocksValue(){
+		double total = 0;
+		for (int i=0; i < portfolioSize; i++){
+
+			total = total + (this.stocks[i].getStockQuantity() * this.stocks[i].getBid());
+		}
+		return total;
+	}
+
+	public double getTotalValue(){
+
+		return this.getStocksValue()+getBalance();
+	}
+
 }
