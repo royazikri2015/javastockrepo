@@ -74,15 +74,12 @@ public class Portfolio {
 		}
 		if (exist == false) 
 		{
-			this.stocks[portfolioSize] = new Stock(stock.getSymbol(), stock.getAsk(), stock.getBid(),stock.getDate(), stock.getStockQuantity());
+			this.stocks[portfolioSize] = new Stock(stock.getSymbol(), stock.getAsk(), stock.getBid(),stock.getDate=(),stock.getStockQuantity());
 			portfolioSize++;
 			returnValue = "Added a stock";
 			System.out.println(returnValue);	
 		}
-
-		
-		
-		}
+	}
 	
 	public boolean sellStock(String symbol, int quantity){ // sell stocks
 
