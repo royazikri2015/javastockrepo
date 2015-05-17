@@ -74,7 +74,7 @@ public class Portfolio {
 		}
 		if (exist == false) 
 		{
-			this.stocks[portfolioSize] = new Stock(stock.getSymbol(), stock.getAsk(), stock.getBid(),stock.getDate=(),stock.getStockQuantity());
+			this.stocks[portfolioSize] = new Stock(stock.getSymbol(), stock.getAsk(), stock.getBid(), stock.getDate(), stock.getStockQuantity());
 			portfolioSize++;
 			returnValue = "Added a stock";
 			System.out.println(returnValue);	
@@ -159,11 +159,11 @@ public class Portfolio {
 
 		int i = this.searchStock (stock.getSymbol());
 
-		if(i>-1){
+		if (i>-1) {
 			if(quantity == -1){
-				int howManyToBuy = (int)this.balance/(int)this.stocks[i].getAsk();
-				this.updateBalance(-howManyToBuy*this.stocks[i].getAsk());
-				this.stocks[i].setStockQuantity(this.stocks[i].getStockQuantity()+howManyToBuy);
+				int howMuchToBuy = (int)this.balance/(int)this.stocks[i].getAsk();
+				this.updateBalance(-howMuchToBuy*this.stocks[i].getAsk());
+				this.stocks[i].setStockQuantity(this.stocks[i].getStockQuantity()+howMuchToBuy);
 				System.out.println("The requested stock quantity, that could be bought, was succefully bought");
 				return true;
 			}
