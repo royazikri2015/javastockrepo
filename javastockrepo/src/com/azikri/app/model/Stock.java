@@ -4,7 +4,9 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Stock {
+import org.algo.model.StockInterface;
+
+public class Stock implements StockInterface {
 	
 	/*private static final int BUY=0;
 	private static final int SELL=1;
@@ -29,8 +31,17 @@ public class Stock {
 	}
 /* COPY C'TOR of stock */
 	
-	public Stock (Stock stock){
-		this (new String (stock.getSymbol()), stock.getAsk(),stock.getBid(),stock.getCreation());
+	public Stock (StockInterface stockInterface){
+		this (new String (stockInterface.getSymbol()), stockInterface.getAsk(),stockInterface.getBid(),((Stock) stockInterface).getCreation());
+	}
+	
+	public Stock()
+	{
+		symbol = null;
+		ask = 0;
+		bid = 0;
+		this.creation = getDate();
+		stockQuantity = 0;
 	}
 	
 	public float getAsk() {
@@ -94,5 +105,23 @@ public class Stock {
 				//+", <b> Date: </b>" +dateStr;
 		
 		return ret;
+	}
+
+	@Override
+	public Date getDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+	public void setDate(long time) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setSymbol(String symbol) {
+		// TODO Auto-generated method stub
+		
 	}
 }
