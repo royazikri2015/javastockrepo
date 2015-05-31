@@ -28,10 +28,6 @@ import org.algo.service.ServiceManager;
 
 public class PortfolioManager implements PortfolioManagerInterface {
 
-	
-	
-
-
 	private DatastoreService datastoreService = ServiceManager.datastoreService();
 
 	public PortfolioInterface getPortfolio() {
@@ -192,8 +188,9 @@ public class PortfolioManager implements PortfolioManagerInterface {
 		newStock.setBid(stockDto.getBid());
 		newStock.setDate(stockDto.getDate().getTime());
 		newStock.setStockQuantity(stockDto.getQuantity());
+		String ALGO_RECOMMENDATION = null;
 		if(stockDto.getRecommendation() != null)
-			newStock.setRecommendation(ALGO_RECOMMENDATION.valueOf(stockDto.getRecommendation()));
+			((Stock)newStock).setRecommendation(String.valueOf(stockDto.getRecommendation()));
 
 		return newStock;
 	}
@@ -210,7 +207,7 @@ public class PortfolioManager implements PortfolioManagerInterface {
 		
 		Stock stock = (Stock) inStock;
 		return new StockDto(stock.getSymbol(), stock.getAsk(), stock.getBid(), 
-				stock.getDate(), stock.getStockQuantity(), stock.getRecommendation().name());
+				stock.getDate(), stock.getStockQuantity(), stock.getRecommendation().toString());
 	}
 
 	/**

@@ -13,7 +13,7 @@ public class Stock implements StockInterface {
 	private static final int REMOVE=2;
 	private static final int HOLD=3;*/
 	
-	private int recommendation;
+	private String recommendation;
 	private int stockQuantity;
 	private float ask,bid;
 	private String symbol;
@@ -60,12 +60,12 @@ public class Stock implements StockInterface {
 			this.bid = bid;
 		}
 	
-	public int getRecommendation() {
+	public String getRecommendation() {
 			return recommendation;
 		}
 	
-	public void setRecommendation(int recommendation) {
-			this.recommendation = recommendation;
+	public void setRecommendation(String string) {
+			this.recommendation = string;
 		}
 	
 	public int getStockQuantity() {
@@ -124,4 +124,5 @@ public class Stock implements StockInterface {
 		// TODO Auto-generated method stub
 		
 	}
+
 }

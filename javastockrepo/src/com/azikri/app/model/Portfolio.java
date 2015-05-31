@@ -3,7 +3,7 @@ package com.azikri.app.model;
 import org.algo.model.StockInterface;
 import org.algo.model.PortfolioInterface;
 
-import com.azikri.*;
+//import com.azikri.*;
 import com.azikri.app.model.Stock;
 
 
