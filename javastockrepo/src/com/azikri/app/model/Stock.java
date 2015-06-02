@@ -6,6 +6,8 @@ import java.util.Date;
 
 import org.algo.model.StockInterface;
 
+import com.azikri.app.model.Portfolio.ALGO_RECOMMENDATION;
+
 public class Stock implements StockInterface {
 	
 	/*private static final int BUY=0;
@@ -64,8 +66,8 @@ public class Stock implements StockInterface {
 			return recommendation;
 		}
 	
-	public void setRecommendation(String string) {
-			this.recommendation = string;
+	public void setRecommendation(String algo_RECOMMENDATION) {
+			this.recommendation = algo_RECOMMENDATION;
 		}
 	
 	public int getStockQuantity() {
@@ -125,4 +127,5 @@ public class Stock implements StockInterface {
 		
 	}
 
+	
 }

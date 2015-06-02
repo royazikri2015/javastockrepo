@@ -29,7 +29,10 @@ import org.algo.service.ServiceManager;
 public class PortfolioManager implements PortfolioManagerInterface {
 
 	private DatastoreService datastoreService = ServiceManager.datastoreService();
-
+	public Portfolio portToSet = new Portfolio();
+	public enum ALGO_RECOMMENDATION{
+		BUY, SELL, REMOVE, HOLD
+	}
 	public PortfolioInterface getPortfolio() {
 		PortfolioDto portfolioDto = datastoreService.getPortfolilo();
 		return fromDto(portfolioDto);
@@ -191,6 +194,10 @@ public class PortfolioManager implements PortfolioManagerInterface {
 		String ALGO_RECOMMENDATION = null;
 		if(stockDto.getRecommendation() != null)
 			((Stock)newStock).setRecommendation(String.valueOf(stockDto.getRecommendation()));
+	 else {
+		 
+		newStock.setRecommendation(ALGO_RECOMMENDATION);
+	}
 
 		return newStock;
 	}
