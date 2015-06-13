@@ -33,6 +33,7 @@ public class PortfolioManager implements PortfolioManagerInterface {
 	public enum ALGO_RECOMMENDATION{
 		BUY, SELL, REMOVE, HOLD
 	}
+	ALGO_RECOMMENDATION toSet = ALGO_RECOMMENDATION.HOLD;
 	public PortfolioInterface getPortfolio() {
 		PortfolioDto portfolioDto = datastoreService.getPortfolilo();
 		return fromDto(portfolioDto);
@@ -194,9 +195,8 @@ public class PortfolioManager implements PortfolioManagerInterface {
 		String ALGO_RECOMMENDATION = null;
 		if(stockDto.getRecommendation() != null)
 			((Stock)newStock).setRecommendation(String.valueOf(stockDto.getRecommendation()));
-	 else {
-		 
-		newStock.setRecommendation(ALGO_RECOMMENDATION);
+	 else {	 
+		newStock.setRecommendation(toSet.toString());
 	}
 
 		return newStock;

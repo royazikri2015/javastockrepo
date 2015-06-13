@@ -74,8 +74,8 @@ public class Stock implements StockInterface {
 			return stockQuantity;
 		}
 
-	public void setStockQuantity(int stockQuantity) {
-		this.stockQuantity = stockQuantity;
+	public void setStockQuantity(float f) {
+		this.stockQuantity = f;
 	}
 
 	public String getSymbol() {
